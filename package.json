@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@vx/gradient": "^0.0.165",
+    "@vx/hierarchy": "^0.0.170",
+    "@vx/shape": "0.0.170",
+    "d3-hierarchy": "^1.1.6",
+    "d3-shape": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
