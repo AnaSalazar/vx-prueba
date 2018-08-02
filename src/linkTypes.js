@@ -104,7 +104,7 @@ export default class extends React.Component {
   state = {
     layout: 'cartesian',
     orientation: 'horizontal',
-    linkType: 'diagonal',
+    linkType: 'step',
     stepPercent: 0.5
   };
 
@@ -152,30 +152,6 @@ export default class extends React.Component {
 
     return (
       <div>
-        <div>
-          <label>layout:</label>
-          <select onChange={e => this.setState({ layout: e.target.value })} value={layout}>
-            <option value="cartesian">cartesian</option>
-            <option value="polar">polar</option>
-          </select>
-
-          <label>orientation:</label>
-          <select onChange={e => this.setState({ orientation: e.target.value })} value={orientation} disabled={layout === 'polar'}>
-            <option value="vertical">vertical</option>
-            <option value="horizontal">horizontal</option>
-          </select>
-
-          <label>link:</label>
-          <select onChange={e => this.setState({ linkType: e.target.value })} value={linkType}>
-            <option value="diagonal">diagonal</option>
-            <option value="step">step</option>
-            <option value="curve">curve</option>
-            <option value="line">line</option>
-          </select>
-
-          <label>step:</label>
-          <input type="range" min={0} max={1} step={.1} onChange={e => this.setState({ stepPercent: e.target.value })} value={stepPercent} disabled={linkType !== 'step' || layout === 'polar'} />
-        </div>
 
         <svg width={width} height={height}>
           <LinearGradient id="lg" from="#fd9b93" to="#fe6e9e" />
